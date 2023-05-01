@@ -6,6 +6,8 @@ from api.serializers import NoteSerializer
 
 
 class NoteAPIList(generics.ListCreateAPIView):
+
+    # self.request.query_params.get('your_key_name', None)
     queryset = Note.objects.all()
     serializer_class = NoteSerializer
     # permission_classes = (IsAuthenticated, )
