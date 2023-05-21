@@ -15,10 +15,10 @@ class NoteAPIList(generics.ListCreateAPIView):
 
     queryset = Note.objects.all()
     serializer_class = NoteSerializer
-    # permission_classes = (IsAuthenticated, )
+    permission_classes = (IsAuthenticated, )
 
 
 class NoteAPIDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Note.objects.all()
     serializer_class = NoteSerializer
-    # permission_classes = (IsAuthenticated, )
+    permission_classes = (IsAuthenticated, )
