@@ -13,12 +13,15 @@ class NoteAPIList(generics.ListCreateAPIView):
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
 
-    queryset = Note.objects.all()
+    # queryset = Note.objects.all()
     serializer_class = NoteSerializer
     permission_classes = (IsAuthenticated, )
 
 
 class NoteAPIDetailView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Note.objects.all()
+    def get_queryset(self):
+        return Note.objects.filter(user=self.request.user.id)
+
+    # queryset = Note.objects.all()
     serializer_class = NoteSerializer
     permission_classes = (IsAuthenticated, )
