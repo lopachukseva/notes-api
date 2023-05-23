@@ -1,9 +1,7 @@
 from rest_framework import generics
 from rest_framework.permissions import IsAuthenticated
-
 from api.models import Note
 from api.serializers import NoteSerializer
-from rest_framework.authtoken.models import Token
 
 
 class NoteAPIList(generics.ListCreateAPIView):
