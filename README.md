@@ -18,3 +18,13 @@
   <li>Аутентификация и авторизация пользователей</li>
   <li>Хранение, добавление, обновление и удаление заметок</li>
 </ul>
+
+
+<h2> Для запуска: </h2>
+<ol>
+  <li>Установка зависимостей: pip install -r requirements.txt </li>
+  <li>Создание миграций: python manage.py makemigrations </li>
+  <li>Применение миграций: python manage.py migrate </li>
+  <li>Создание суперпользователя: python manage.py createsuperuser </li>
+  <li>Запуск тестового веб сервера: python manage.py runserver </li>
+</ol>
